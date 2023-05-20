@@ -1,0 +1,40 @@
+.headerContainer{
+    height: 50px;
+    width: 100%;
+    // background: red;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+
+    .profile{
+        ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    li{
+        img{
+            width: 20px;;
+        }
+    }
+        }
+    }
+
+    .dropdownButton{
+        height: 40px;
+        width: 40px;
+        // border: 1px solid black;
+        border-radius: 50%;
+        background-color: transparent;
+        display: grid;
+        place-content: center;
+        margin-right: 15px;
+        background: #dfdfdf;
+
+        div{
+            background: #dfdfdf;
+        }
+    }
+}

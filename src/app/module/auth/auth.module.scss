@@ -1,0 +1,96 @@
+.authContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+    .loginSide{
+        height: 100%;
+        width: 50%;
+        /* background-color: red; */
+        display: flex;
+
+        .header{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .authBody{
+            min-height: 20rem;
+            height: auto;
+            margin: auto;
+
+            .welcomeMessage{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0rem;
+                h4{
+                    font-size: 2rem;
+                }
+                p{
+                    line-height: 4rem;
+                    color: #6d727b;
+                }
+            }
+
+            .formFields{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .submitButton{
+                height: 36px;
+                width: 100%;
+                border-radius: 6px;
+                border: none;
+                color: white;
+                background: #7f55da;
+            }
+            .orOption{
+                width: 100%;
+                display: inline-block;
+                text-align: center;
+                margin: 10px 0px;
+            }
+            // .orOption span::after{
+            //     content: "";
+            //     height: 1px;
+            //     width: 100%;
+            //     color: black;
+            //     display: inline-block;
+
+            //     background-color: #6d727b;
+            // }
+            .googleBtn{
+                height: 36px;
+                width: 100%;
+                border-radius: 6px;
+                color: black;
+                background: transparent;
+                border: 1px solid #6d727b;
+                position: relative;
+
+                img{
+                    width: 20px;
+                    position: absolute;
+                    left: 1.7rem;
+                    top: 6px;
+                
+                }
+            }
+            .forgetPassword{
+                height: 50px;
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 1rem;
+            }
+          
+        }
+    }
+    .animationSide{
+        height: 100%;
+        width: 50%;
+        background-color: #f3f4f7;
+    }
+}
