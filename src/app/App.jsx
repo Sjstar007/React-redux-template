@@ -1,19 +1,29 @@
-import React,{ useState,Suspense } from 'react'
+import React,{ useState,Suspense, useEffect } from 'react'
 import { GlobalContext } from '../context/globalContext';
 import ProtectedRoutes from '../routes/protectedRoutes';
 import { Routes,Route } from 'react-router-dom';
 import routingConfig from '../routes/layoutRoute';
 // import Header from '../app/module/header/header';
+import { fetchStatistics } from '../redux/slice';
+import { useDispatch, useSelector } from "react-redux";
 
 import './App.css'
 
 function App() {
+  const dispatch = useDispatch();
+  const data = useSelector(state => state.firstApiCalll);
+
+  console.log("data:::",data)
   const [globalContext ,setGlobalContext] = useState({
     userInfo: null,
     token: null,
     isLoading: false,
     language: ''  
   })
+
+  useEffect(() => {
+    dispatch(fetchStatistics())
+  },[])
 
   return (
     <>
