@@ -6,6 +6,7 @@ import routingConfig from '../routes/layoutRoute';
 // import Header from '../app/module/header/header';
 import { fetchStatistics } from '../redux/slice';
 import { useDispatch, useSelector } from "react-redux";
+import ErrorBoundary from './shared/Error/ErrorBoundary';
 
 import './App.css'
 
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <>
+    <ErrorBoundary>
       <GlobalContext.Provider value={{globalContext, setGlobalContext}}>
         {/* <Header /> */}
         <Routes>
@@ -47,6 +49,7 @@ function App() {
           })}
         </Routes>
       </GlobalContext.Provider>
+    </ErrorBoundary>
     </>
   )
 }
