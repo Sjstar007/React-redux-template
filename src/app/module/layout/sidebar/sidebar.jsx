@@ -37,6 +37,10 @@ function Sidebar({ sideBarOpen, setSideBarOpen }) {
       name: "Todo",
       routeName: "/todo",
     },
+    {
+      name: "chat",
+      routeName: "/chatbox",
+    },
   ];
 
   const handleSideBarNav = () => {

@@ -3,6 +3,8 @@ import { lazy } from 'react';
 const Dashboard = lazy(() => import("../app/module/dashboard/"));
 const PageNotFound = lazy(() => import("../app/shared/pageNotFound"));
 const MeetPage = lazy(() => import("../app/module/meetRoom"))
+const ChatBox = lazy(() => import("../app/module/chatBox"))
+
 const routes = [
   {
     path: '/dashboard',
@@ -13,6 +15,11 @@ const routes = [
     path: '/new-meet',
     name: 'new-meet',
     component: MeetPage
+  },
+  {
+    path: '/chatbox',
+    name: 'Chat Module',
+    component: ChatBox
   }
 ]
 
